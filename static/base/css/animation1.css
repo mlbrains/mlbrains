@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+  }
+.firstsec{
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
+}
+@keyframes fadein{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.brain{
+    -webkit-animation: brainin 7s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: brainin 7s; /* Firefox < 16 */
+    -ms-animation: brainin 7s; /* Internet Explorer */
+     -o-animation: brainin 7s; /* Opera < 12.1 */
+        animation: brainin 7s;
+
+}
+@keyframes brainin{
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.card:hover{
+    -webkit-animation: cardin 1s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: cardin 1s; /* Firefox < 16 */
+    -ms-animation: cardin 1s; /* Internet Explorer */
+     -o-animation: cardin 1s; /* Opera < 12.1 */
+        animation: cardin 1s;
+}
+@keyframes cardin{
+    from { transform: scale(1); }
+    to   { transform: scale(1.09); }
+}

@@ -1,0 +1,426 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mlbrains</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{% static 'base/images/logonew.jpeg' %}"/>
+    <link href="{% static 'base/css/homepagecss.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'base/css/bootstrap.min.css' %}">   
+    <link rel="stylesheet" href="{% static 'base/font-awesome/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'base/css/animation1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/vendor/animate/animate.css' %}">	
+	<link rel="stylesheet" type="text/css" href="{% static 'base/vendor/css-hamburgers/hamburgers.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'base/vendor/select2/select2.min.css' %}">	
+    <script src="{% static 'base/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body class="body">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <h4 class="navbar-brand logos"><img class="logoimg" style="width: 15vmax;" src="{% static 'base/images/logonew.jpeg' %}"></h4>
+        <button class="navbar-toggler ml-auto hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="left: 70%; position: absolute;">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#About">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            {%if user.is_authenticated%}
+                <li class="nav-item">
+                    <a class="nav-link" href="/landingpage/">{{user}}</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout/">Logout</a>
+                </li>
+            
+            {%else%}
+                <li class="nav-item">
+                    <a class="nav-link" href="/login/">Login</a>
+                </li>
+            {%endif%}
+          </ul>
+        </div>
+      </nav>
+    <div class="container-fluid" style="margin-top: 10px;">
+			<div class="row">
+				<div class="col-sm-6 firstsec" id="firstsec" style="padding-top: 25px; position: relative;">
+                    <p class="firstleft">MLBrains: Accelerating Your Artificial Intelligence Journey</p>
+
+                    <p class="qwe" style="padding-top: 25px;">Your Trusted AI Partner</p>
+
+                    <p class="asd" style="padding-top: 25px;">Whether you’ve just started your own business, or have been in the market for years - taking care of your AI needs can be complicated and exhausting. At MLBrains, we believe that your AI requirements should be supported by experienced professionals, and offer a variety of services to cater to your organization’s needs. Call us today to find out more.</p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="secoundleft">
+                        <img class="brain" src="{% static 'base/images/brain.png' %}">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;" >
+                <div class="col-sm-12 secound">   
+                    <img style="height: 100%; width: 100%; object-fit: contain; " class="secoundimage" src="{% static 'base/images/secoundimage.webp' %}">
+                    <div class="text-block" style="position: absolute;">
+                        <h4 style="padding-bottom: 20px;">MLBrains</h4>
+                        <p style="padding-bottom: 20px;">Accelerating Your AI Journey!</p>
+                        <p style="padding-bottom: 20px;">We offer a range of solutions to speed up your Artificial Intelligence & Machine Learning journey. We do a complete AI Project specifically customized as per your requirements. We also help in setting up your AI Journey, right from Data Cleaning, Data Labeling to training of ML Models and helping you apply the results to generate true business value.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-sm-4">
+                    <div class="card" style="text-align: center ; 
+                    line-height: 1.75em;
+                    margin-bottom: 40px;">
+                        <img class="card-img-top" src="{% static 'base/images/firstcard.webp' %}" alt="Card image cap">
+                        <div class="card-body" style=" background-color:whitesmoke;">
+                          <h5 class="card-title" style="font-weight: bold; color: #00004d; font-family:Arial, Helvetica, sans-serif">End-to-End AI Project</h5>
+                          <p class="card-text" style="font-style: italic;">We understand that starting your AI journey could be a daunting task. We make it easier for companies by understanding their business and preparing an AI roadmap for them. We also help them in executing the projects, if you wish so.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style=" text-align: center;
+                    line-height: 1.75em;
+                    margin-bottom: 40px;">
+                        <img class="card-img-top" src="{% static 'base/images/secoundcard.webp' %}" alt="Card image cap">
+                        <div class="card-body" style=" background-color:whitesmoke;">
+                          <h5 class="card-title" style="font-weight: bold; color: #00004d; font-family:Arial, Helvetica, sans-serif">MLEnable : Data Cleaning & Labeling</h5>
+                          <p class="card-text" style="font-style: italic;" >Availability of accurate labeled data is a big challenge and takes up a lot of time of your data scientists. We use a mix of data preparatory algorithms and manual processes to label your data at >95% accuracy.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="card" style=" text-align: center;
+                    line-height: 1.75em;
+                    margin-bottom: 40px;">
+                        <img class="card-img-top" src="{% static 'base/images/thirdcard.webp' %}" alt="Card image cap">
+                        <div class="card-body" style=" background-color:whitesmoke;">
+                          <h5 class="card-title" style="font-weight: bold; color: #00004d; font-family:Arial, Helvetica, sans-serif">AI Model Training & Data Analysis</h5>
+                          <p class="card-text" style="font-style: italic; ">Looking for data insights? Our experienced AI Engineers can help you with training your models and improving their accuracy. We can also help with analysis and application of the insights to help you extract business value.         </p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-sm-12 aboutus">
+                    <h1 class="aboutus" id="About" style="color: #00004d;font-weight: bold; text-align: center;">About Us</h1>
+                    <h5 class="aboutus" style="color: #00004d; font-weight: lighter; text-align: center;">MLBrains: Accelerating Your Artificial Intelligence Journey</h5>
+                </div>
+            </div>
+            <div class="row aboutinfo" style="padding-top: 100px; text-align: center;">
+                <div class="col-sm-5 kumardiv" >
+                    <img class="kumar" src="{% static 'base/images/Kumar.jpg' %}">
+                    <h4 style="padding-top: 50px; color: #00004d;">Kumar B M</h4>
+                    <blockquote class="blockquote"></blockquote>
+                    <p class="about1" style="font-family:Verdana, Geneva, Tahoma, sans-serif; padding-top: 50px; color: #00004d;">Kumar is a <strong>Technology & Growth Marketer</strong> with over eighteen years of work experience in B2B and B2C companies / Startups in Marketing (Head of Marketing, Lead Generation, Growth Hacking, Product Management), and Sales & Account Management (Partnerships, Deal Negotiation).<br><br>
+                        He has worked with corporate organizations like <strong>Airtel, Tech Mahindra, Etisalat-UAE, Jumbo Electronics</strong> and with Startups like AShield Technologies (cybersecurity) and Reverie Language Technologies. He completed <strong>PGDM (MBA) from IIM Ahmedabad</strong> after graduating as an <strong>Electronics Engineer from SVNIT (erstwhile REC) Surat.</strong> <br><br>
+                        Kumar believes that Technology can provide a significant leverage to impact people’s lives positively.  In his spare time, he likes doing Yoga and watching TV series. </p>        
+                </div>
+                <div class="col-sm-5 nikhildiv">
+                    <img class="nikhil" src="{% static 'base/images/Nikhil.png' %}">
+                    <h4 style="padding-top: 50px; color: #00004d;">Nikhil Gupta</h4>
+                    <p class="about1" style="font-family:Verdana, Geneva, Tahoma, sans-serif; padding-top: 50px; color: #00004d;">Nikhil is an accomplished executive from <strong>IIT-Varanasi and MIT (USA)</strong> with 24+ years of experience in IT Software Industry - in Global delivery, Testing, Quality and Consulting. He has <strong>hands-on experience in AI, Automation, Software process</strong> in domains like Transport, Telecom and BFSI. He has worked as Delivery Prime for an Australia based Big-Data Product project. <br><br>
+                        Nikhil is research-driven, with good people-skills and has an ability to build cohesive teams bound towards a common target. Nikhil was associated with organizations like<strong> WIPRO, NTT Data</strong> where he was instrumental in devising processes and strategy for effective implementation of technology.<br><br>
+                        His interests lie in using Machine Learning and Natural Language Processing (NLP) for improving Product Quality- right from Requirements validation, Product design, Defect Prediction/Identification to RCA.</p>        
+                </div>
+            </div>
+            <div class="row" style="padding-top: 50px;">
+                <div class="col-sm-12" class="contactus">
+                    <h1 class="contactus" id="contact" style="color: #00004d;font-weight: bold; text-align: center; ">Contact Us</h1>
+                    <h5 class="contactus" style="color: #00004d; font-weight: lighter; text-align: center;">Contact MLBrains team today to discuss how we can help you in your AI Journey.</h5>
+                    <h6 class="contactus" style="color: #00004d; font-weight: lighter; text-align: center;">Reach out to us at : <a href="mailto: kumar.bm@mlbrains.com">kumar.bm@mlbrains.com</a> / +91-9902059730 or <a href="mailto: nikhil.gupta@mlbrains.com">nikhil.gupta@mlbrains.com</a> / +91-9845556565<br><!-- <br> You can also fill in the form below and we will get in touch with you. --></h6>
+                </div>
+            </div>
+            <!-- <div class="row contactform" style="text-align: center;">
+                <div class="col-sm-12">
+                    <form method="POST">
+                    {% csrf_token %}
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="name" name="name" required>
+                            <label for="name" class="label">Name</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="email" name="email" required>
+                            <label for="email" class="label">Email</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="phone" name="phone" required>
+                            <label for="phone" class="label">Enter your phone number</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="website" name="website" required>
+                            <label for="website" class="label">Enter your company Website</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="subject" name="subject" required>
+                            <label for="subject" class="label">Subject</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="text" class="input-text" id="message" name="message" required>
+                            <label for="=message" class="label">Type your message here...</label>
+                        </div>
+                        <div class="form-field">
+                            <input type="submit" class="submit-btn" value="submit" name="">
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+            <!-- <div class="row">
+                <div class="col-sm-12" style="text-align: center;">
+                    <h4 class="footer" style="color: #00004d; text-align: center;">MLBrains</h4>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-sm-12" style="text-align: center;">
+                    <h6 class="footer" style="color: #00004d; font-weight: lighter; padding-top: 30px; padding-bottom: 30px; text-align: center;">©2020 by MLBrains</h6>
+                </div>
+            </div>
+           <!-- footer -->
+        
+    </div>
+        
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="googleMap" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYEd9o3phOIG7-USIHLWYFQiILDj_Tih0&callback=myMap"></script>
+    <script>
+        function myMap() {
+            var mapProp= {
+                center:new google.maps.LatLng(12.9716,12.9716),
+                zoom:10,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+    </script> -->
+<style>
+    /* contact form */
+    .contactform{
+        position: relative;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 10px;
+    }
+    .form-field{
+        position: relative;
+        margin: 20px;
+    }
+    .contactform .input-text{
+        display: block;
+        width: 100%;
+        height: 36px;
+        border-width: 0 0 2px 0;
+        border-color: #00004d;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400px;
+    }
+    .contactform .input-text:focus + .label,
+    .contactform .input-text.not-empty + .label{
+        transform: translateY(-24px);
+    }
+
+    .contactform .input-text:focus{
+        outline: none;
+    }
+    .contactform .label{
+        position: absolute;
+        left: 20px;
+        bottom: 11px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #00004d;
+        cursor: text;
+        transition: transform 0.2s ease-in-out;
+    }
+    .contactform .submit-btn{
+        text-align: center;
+        display: inline-block;
+        background-color: #00004d;
+        color: white;
+        font-size: 16px;
+        padding: 8px;
+        border: none;
+        width: 20vmax;
+        cursor: pointer;
+    }
+
+
+    /* endform */
+    .form-field{
+        padding-top: 20px;
+    }
+    .firstleft{
+        text-align: left;
+    }
+    .kumardiv{
+       margin-right: 60px;
+    }
+    .text-block{
+        background-color:skyblue;
+        color: #00004d;
+        text-align: center;
+        top: 45%;
+        width: 70%;
+        font-weight: bold;
+        left: 15%;
+        top: 25%;
+    }
+    .aboutinfo{
+        width: 90%;
+        margin-left: 10%; 
+    }
+    .card{
+        margin-left: 30px;
+        width: 23rem;
+        height: 41rem;
+        font-size: 18px;
+    }
+    .firstsec{
+        padding-left: 100px;
+        position: absolute;
+    }
+    .logos{
+        margin-left: 50px;
+    }
+    .asd{
+        font-size: 1.20vw;
+    }
+    .brain{
+        width: 100%;
+        right: 7%;
+    }
+    .about1{
+        width: 100%;
+        text-align: left; 
+    }
+    .qwe, .asd{
+        text-align: left;
+    }
+    .footer{
+        margin-left: 20px;
+    }
+    
+    @media (max-width:767px){
+        .navbar{
+            margin-top: 10%;
+        }
+        .kumardiv{
+            margin-right: 0px;
+            width: 100%;
+        }
+        .contactform{
+            right: 10%;
+        }
+        .about1{
+            width: 100%;
+            text-align: center;
+        }
+        .aboutus{    
+            width: 100%;
+        }
+        .card{
+            margin-left: 0%;
+            width: 100%;
+            height: 41rem;
+            font-size: 14.5px;
+        }
+        .firstsec{
+            padding-left: 1%;
+        }
+        .brain{
+            width: 100%;
+        }
+        .firstleft{
+            text-align: center;
+            font-size: 8vw;
+            width: 100%;
+        }
+        .logoimg{
+            margin-left: 0%;
+        }
+        .logos{
+            margin-left: 0%;
+        }
+        .aboutus{
+            width: 100%;
+        }
+        .asd{
+            font-size: 2vw;
+        }
+        .nikhil{
+            width: 100%;
+        }
+        .contactus{
+            width: 100%;
+        }
+        .contactform{
+            width: 110%;
+        }
+        .footer{
+            width: 90%;
+        }
+        .aboutinfo{
+            margin-left: 0%;
+        }
+        .nikhil, .kumar{
+            width: 140px;
+        }
+        .kumardiv, .nikhildiv{
+            margin-left: 25px;
+        }
+        .qwe, .asd{
+            text-align: center;
+            width: 100%;
+        }
+
+    }
+    @media only screen and (min-device-width: 1024px) and (max-device-height: 1366px) and (-webkit-min-device-pixel-ratio: 2)  and (orientation: portrait)  {
+        .card{
+            width: 100%;
+            margin-left: 0%;
+        }
+    }
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px)  {
+        .card{
+            width: 100%;
+            margin-left: 0%;
+        }
+        .text-block{
+            font-size: 60%;
+        }
+    }
+</style>
+    <script src="{% static 'base/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'base/vendor/animsition/js/animsition.min.js' %}"></script>
+	<script src="{% static 'base/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'base/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'base/vendor/select2/select2.min.js' %}"></script>
+	<script src="{% static 'base/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'base/vendor/daterangepicker/daterangepicker.js' %}"></script>
+	<script src="{% static 'base/vendor/countdowntime/countdowntime.js' %}"></script>
+	<script src="{% static 'base/js/main.js' %}"></script>
+</body>
+</html>

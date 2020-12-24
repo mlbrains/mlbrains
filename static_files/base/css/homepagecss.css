@@ -1,0 +1,34 @@
+.firstleft{
+    line-height: 1.25em;
+    font-size: 5vw;
+    font-weight: bold;
+    color: #00004d;
+    top: 5%;
+    
+}
+.qwe{
+    color: #00004d;
+    font-style: italic;
+    font-size: 2vw;
+    font-weight: bold;
+    
+}
+.asd{
+    font-weight: bold;
+    line-height: 1.875em;
+    color: #00004d;
+    
+}
+.kumar, .nikhil {
+    border-radius: 50%;
+    width: 250px;
+    box-shadow: 0px 6px 5px #ccc;
+}
+
+
+
+@media (max-width:767px){
+    .secound {
+        display: none;
+    }
+}
