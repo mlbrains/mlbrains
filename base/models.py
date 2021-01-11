@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class MlUser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE,null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE,null=True, blank=True)
     name = models.CharField(max_length=100, null=True, blank=True)
     email = models.CharField(max_length=100, null=True, blank=True)
     phone = models.CharField(max_length=100, null=True, blank=True)
@@ -23,18 +23,23 @@ class Projectsdetail(models.Model):
     project_Work_type = models.CharField(max_length=1000, null=True, blank=True)
     project_points = models.CharField(max_length=1000, null=True, blank=True)
     project_status = models.BooleanField(default=False)
+    Total_elements = models.IntegerField(null=True, blank=True, default=0)
 
     def __str__(self):
         return self.project_ID
 
 class Elements(models.Model):
-    projectchoices = (
-        ('project1', 'project1'),
-        ('project2', 'project2'),
-        ('project3', 'project3'),
+    statuschoices = (
+        ('New', 'New'),
+        ('Allocated', 'Allocated'),
+        ('Labeled', 'Labeled'),
+        ('Unclear', 'Unclear'),
     )
-    #element_ID = models.IntegerField(null=True, blank=True)
-    project_ID = models.CharField(max_length=100, choices=projectchoices, default=None)
-    filename = models.ImageField(upload_to='images', default=None)
+    project_ID = models.ForeignKey(Projectsdetail, on_delete=models.CASCADE, default=None)
+    Allocated_to_User = models.ForeignKey(MlUser, on_delete=models.CASCADE, default=None, blank=True, null=True)
+    element_ID = models.CharField(max_length=1000,null=True)
+    status = models.CharField(max_length=1000, choices=statuschoices,null=True, default=None)
+    filename = models.ImageField(upload_to='images', default=None, blank=True)
     def __str__(self):
-        return self.project_ID
+        return self.element_ID
+

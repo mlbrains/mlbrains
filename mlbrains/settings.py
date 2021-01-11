@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #by amir
     'base',
+    'Mlclient',
     #social auth
     'social_django',
     'django_extensions',

@@ -42,7 +42,7 @@
             </li> -->
 
             <li class="nav-item">
-                <a class="nav-link" href="">Profile</a>
+                <a class="nav-link" href="/profile/">Profile</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout/">Logout</a>
@@ -113,11 +113,13 @@
                           <td>{{i.project_description}}</td>
                           <td>{{i.project_Work_type}}</td>
                           <td>{{i.project_points}}</td>
-                          {% if i.project_status %}
+                          <!-- {% if i.project_status %}
                             <td><i class="fa fa-check" style="color: green;" aria-hidden="true"></i></td>
                           {% else %}
                           <td><i class="fa fa-times" style="color: red;" aria-hidden="true"></i></td>
-                          {% endif %}
+                          {% endif %} -->
+                          <!-- <td><button class="btn" onclick="toggle()" id="{{i.project_ID}}" value="{{i.project_ID}}"><i class="fa fa-square-o fa-2x" aria-hidden="true"></i></button></td> -->
+                          <td><a href="/landingpage/"><i class="fa fa-square-o fa-2x" aria-hidden="true"></i></a></td>
                         </tr>
                         {% endfor %}
                         <!-- <tr>
@@ -229,4 +231,20 @@
   progress.style.opacity = 1;
 
 </script>
+<!-- <script type="text/javascript">
+  var clicked = false;
+  let productContainer = document.querySelector(".btn");
+  function toggle(){
+    if(!clicked){
+      clicked = true
+      productContainer.innerHTML = `<i class="fa fa-check" style="color: green;" aria-hidden="true"></i>` ;
+      /* var qwerty = document.getElementById("{{i.project_ID}}").value; */
+      /* console.log(productvalue) */
+    }else{
+      clicked = true;
+      /* clicked = false; for toggle */
+    }
+
+  }
+</script> -->
 </html>
